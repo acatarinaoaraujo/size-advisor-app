@@ -64,11 +64,11 @@
 			children = (
 				F36C4B35287695EA00A5CCF4 /* AppDelegate.swift */,
 				F36C4B5C2876991800A5CCF4 /* SceneDelegate.swift */,
-				F36C4B4D2876991800A5CCF4 /* Assets.xcassets */,
 				F36C4B4E2876991800A5CCF4 /* Models */,
 				F36C4B522876991800A5CCF4 /* LaunchScreen.storyboard */,
 				F36C4B552876991800A5CCF4 /* Controllers */,
 				F36C4B582876991800A5CCF4 /* Views */,
+				F36C4B4D2876991800A5CCF4 /* Assets.xcassets */,
 				F36C4B5B2876991800A5CCF4 /* Info.plist */,
 			);
 			path = "Size Adviser";
