@@ -10,13 +10,8 @@ import UIKit
 class GenderViewController: UIViewController {
     
 
-    @IBOutlet weak var adviceLabel: UILabel!
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    @IBAction func genderButtonPressed(_ sender: Any) {
     }
-
     
-
 }
 
