@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F34636162877BACD003D0332 /* GenderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34636152877BACD003D0332 /* GenderViewController.swift */; };
 		F36C4B36287695EA00A5CCF4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36C4B35287695EA00A5CCF4 /* AppDelegate.swift */; };
 		F36C4B602876991800A5CCF4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F36C4B4D2876991800A5CCF4 /* Assets.xcassets */; };
 		F36C4B612876991800A5CCF4 /* CalculatorBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36C4B4F2876991800A5CCF4 /* CalculatorBrain.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F34636152877BACD003D0332 /* GenderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenderViewController.swift; sourceTree = "<group>"; };
 		F36C4B32287695EA00A5CCF4 /* Size Adviser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Size Adviser.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F36C4B35287695EA00A5CCF4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F36C4B4D2876991800A5CCF4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 			children = (
 				F36C4B562876991800A5CCF4 /* ResultViewController.swift */,
 				F36C4B572876991800A5CCF4 /* CalculateViewController.swift */,
+				F34636152877BACD003D0332 /* GenderViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -177,6 +180,7 @@
 				F36C4B622876991800A5CCF4 /* BMI.swift in Sources */,
 				F36C4B662876991800A5CCF4 /* ResultViewController.swift in Sources */,
 				F36C4B6A2876991800A5CCF4 /* SceneDelegate.swift in Sources */,
+				F34636162877BACD003D0332 /* GenderViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

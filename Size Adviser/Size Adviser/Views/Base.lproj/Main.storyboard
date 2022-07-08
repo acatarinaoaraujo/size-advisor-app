@@ -11,7 +11,7 @@
         <!--Gender View Controller-->
         <scene sceneID="3Po-qC-4KO">
             <objects>
-                <viewController id="yDL-hc-Vef" userLabel="Gender View Controller" sceneMemberID="viewController">
+                <viewController id="yDL-hc-Vef" userLabel="Gender View Controller" customClass="GenderViewController" customModule="Size_Adviser" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="UG5-If-pcR">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
