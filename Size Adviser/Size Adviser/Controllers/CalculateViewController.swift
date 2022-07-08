@@ -20,7 +20,15 @@ class CalculateViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-
+    
+    
+    @IBAction func genderButtonPressed(_ sender: UIButton) {
+            print(sender.currentTitle ?? "hello")
+         
+            
+    }
+    
+    /*
     @IBAction func heightSliderChanged(_ sender: UISlider) {
         let height = String(format: "%.2f", sender.value)
         heightLabel.text = "\(height)m"
@@ -47,7 +55,7 @@ class CalculateViewController: UIViewController {
             destinationVC.advice = calculatorBrain.getAdvice()
             destinationVC.color = calculatorBrain.getColor()
         }
-    }
+    } */
 }
 
 
