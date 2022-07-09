@@ -27,8 +27,11 @@ class CalculateViewController: UIViewController {
             let title = titleLabel.text!
             print(title)
         }
-         
-            
+    }
+    
+    
+    @IBAction func unitSegmentedChanged(_ sender: UISegmentedControl) {
+            print(sender.selectedSegmentIndex)
     }
     
     /*
