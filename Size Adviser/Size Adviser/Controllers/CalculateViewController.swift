@@ -23,7 +23,10 @@ class CalculateViewController: UIViewController {
     
     
     @IBAction func genderButtonPressed(_ sender: UIButton) {
-            print(sender.currentTitle ?? "hello")
+        if let titleLabel = sender.titleLabel {
+            let title = titleLabel.text!
+            print(title)
+        }
          
             
     }
