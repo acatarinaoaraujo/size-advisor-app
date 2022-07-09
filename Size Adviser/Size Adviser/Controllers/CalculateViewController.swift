@@ -41,6 +41,8 @@ class CalculateViewController: UIViewController {
     
     @IBAction func unitSegmentedChanged(_ sender: UISegmentedControl) {
             print(sender.selectedSegmentIndex)
+        
+        
     }
     
     /*
