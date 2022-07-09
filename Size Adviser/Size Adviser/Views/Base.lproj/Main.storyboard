@@ -95,7 +95,7 @@
                                         <color key="minimumTrackTintColor" red="0.4549019608" green="0.44705882349999998" blue="0.82352941180000006" alpha="0.51797945209999996" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                         <color key="thumbTintColor" red="0.4549019608" green="0.44705882349999998" blue="0.82352941180000006" alpha="0.49510380990000002" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
-                                            <action selector="heightSliderChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="oZk-iN-7D5"/>
+                                            <action selector="chestSliderChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="6wq-Cy-Lv0"/>
                                         </connections>
                                     </slider>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="xw8-bR-YUu">
@@ -229,7 +229,8 @@
                     </view>
                     <connections>
                         <outlet property="chestLabel" destination="2GN-cs-U2z" id="a7v-k2-gIM"/>
-                        <outlet property="chestSlider" destination="Pky-qY-oVp" id="WqJ-0w-9tG"/>
+                        <outlet property="chestNumLabel" destination="kUy-Nb-8dS" id="TE6-0b-J2v"/>
+                        <outlet property="chestSlider" destination="Pky-qY-oVp" id="LpB-Go-rmt"/>
                         <segue destination="lkq-xS-Cin" kind="presentation" identifier="goToResult" id="vtF-sS-bhl"/>
                     </connections>
                 </viewController>

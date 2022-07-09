@@ -18,6 +18,7 @@ class CalculateViewController: UIViewController {
     @IBOutlet weak var weightSlider: UISlider!*/
     
     @IBOutlet weak var chestLabel: UILabel!
+    @IBOutlet weak var chestNumLabel: UILabel!
     @IBOutlet weak var chestSlider: UISlider!
     
     override func viewDidLoad() {
@@ -32,6 +33,10 @@ class CalculateViewController: UIViewController {
             
             if title == "Woman" {
                 chestLabel.text = "Bust"
+                chestNumLabel.text = "36in"
+                chestSlider.minimumValue = 29
+                chestSlider.maximumValue = 43
+                chestSlider.value = 36
             } else if title == "Man" {
                 chestLabel.text = "Chest"
             }
@@ -45,6 +50,10 @@ class CalculateViewController: UIViewController {
         
     }
     
+    @IBAction func chestSliderChanged(_ sender: UISlider) {
+        let height = String(format: "%.0f", sender.value)
+        chestNumLabel.text = "\(height)in"
+    }
     /*
     @IBAction func heightSliderChanged(_ sender: UISlider) {
         let height = String(format: "%.2f", sender.value)
