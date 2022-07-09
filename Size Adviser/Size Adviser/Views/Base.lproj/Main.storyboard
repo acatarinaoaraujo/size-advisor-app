@@ -229,6 +229,7 @@
                     </view>
                     <connections>
                         <outlet property="chestLabel" destination="2GN-cs-U2z" id="a7v-k2-gIM"/>
+                        <outlet property="chestSlider" destination="Pky-qY-oVp" id="WqJ-0w-9tG"/>
                         <segue destination="lkq-xS-Cin" kind="presentation" identifier="goToResult" id="vtF-sS-bhl"/>
                     </connections>
                 </viewController>

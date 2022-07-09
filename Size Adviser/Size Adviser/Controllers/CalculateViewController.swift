@@ -18,7 +18,7 @@ class CalculateViewController: UIViewController {
     @IBOutlet weak var weightSlider: UISlider!*/
     
     @IBOutlet weak var chestLabel: UILabel!
-    
+    @IBOutlet weak var chestSlider: UISlider!
     
     override func viewDidLoad() {
         super.viewDidLoad()
