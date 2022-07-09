@@ -12,10 +12,13 @@ class CalculateViewController: UIViewController {
     
     var calculatorBrain = CalculatorBrain()
 
-    @IBOutlet weak var heightLabel: UILabel!
+    /*@IBOutlet weak var heightLabel: UILabel!
     @IBOutlet weak var weightLabel: UILabel!
     @IBOutlet weak var heightSlider: UISlider!
-    @IBOutlet weak var weightSlider: UISlider!
+    @IBOutlet weak var weightSlider: UISlider!*/
+    
+    @IBOutlet weak var chestLabel: UILabel!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +29,12 @@ class CalculateViewController: UIViewController {
         if let titleLabel = sender.titleLabel {
             let title = titleLabel.text!
             print(title)
+            
+            if title == "Woman" {
+                chestLabel.text = "Bust"
+            } else if title == "Man" {
+                chestLabel.text = "Chest"
+            }
         }
     }
     
