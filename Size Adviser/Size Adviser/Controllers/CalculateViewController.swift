@@ -36,7 +36,7 @@ class CalculateViewController: UIViewController {
                 chestLabel.text = "Bust"
                 
                 //chestNumLabel.text = "36" + units
-                modifyLabels("36" + units)
+                modifyLabels("36" + units, chestNumLabel)
                 
                 chestSlider.minimumValue = 29
                 chestSlider.maximumValue = 43
@@ -45,7 +45,7 @@ class CalculateViewController: UIViewController {
                 chestLabel.text = "Chest"
                 
                 //chestNumLabel.text = "41" + units
-                modifyLabels("41" + units)
+                modifyLabels("41" + units, chestNumLabel)
                 
                 chestSlider.minimumValue = 32
                 chestSlider.maximumValue = 50
@@ -62,11 +62,11 @@ class CalculateViewController: UIViewController {
         } else {
             units = "cm"
         }
-        modifyLabels((chestNumLabel.text?.prefix(2))! + units)
+        modifyLabels((chestNumLabel.text?.prefix(2))! + units, chestNumLabel)
     }
     
-    func modifyLabels(_ chestNum: String) {
-        chestNumLabel.text = chestNum
+    func modifyLabels(_ chestNum: String, _ label : UILabel) {
+        label.text = chestNum
     }
     
     @IBAction func chestSliderChanged(_ sender: UISlider) {
