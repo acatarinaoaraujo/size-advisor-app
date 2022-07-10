@@ -34,13 +34,19 @@ class CalculateViewController: UIViewController {
             
             if title == "Woman" {
                 chestLabel.text = "Bust"
-                chestNumLabel.text = "36" + units
+                
+                //chestNumLabel.text = "36" + units
+                modifyLabels("36" + units)
+                
                 chestSlider.minimumValue = 29
                 chestSlider.maximumValue = 43
                 chestSlider.value = 36
             } else if title == "Man" {
                 chestLabel.text = "Chest"
-                chestNumLabel.text = "41" + units
+                
+                //chestNumLabel.text = "41" + units
+                modifyLabels("41" + units)
+                
                 chestSlider.minimumValue = 32
                 chestSlider.maximumValue = 50
                 chestSlider.value = 41
@@ -53,11 +59,14 @@ class CalculateViewController: UIViewController {
             print(sender.selectedSegmentIndex)
         if sender.selectedSegmentIndex == 0 {
             units = "in"
-            chestNumLabel.text = (chestNumLabel.text?.prefix(2))! + units
         } else {
             units = "cm"
-            chestNumLabel.text = (chestNumLabel.text?.prefix(2))! + units
         }
+        modifyLabels((chestNumLabel.text?.prefix(2))! + units)
+    }
+    
+    func modifyLabels(_ chestNum: String) {
+        chestNumLabel.text = chestNum
     }
     
     @IBAction func chestSliderChanged(_ sender: UISlider) {
