@@ -11,14 +11,9 @@ import UIKit
 class CalculateViewController: UIViewController {
     
     var calculatorBrain = CalculatorBrain()
-
-    /*@IBOutlet weak var heightLabel: UILabel!
-    @IBOutlet weak var weightLabel: UILabel!
-    @IBOutlet weak var heightSlider: UISlider!
-    @IBOutlet weak var weightSlider: UISlider!*/
     
     var units = "in"
-    var segmentIndex = 0
+    //var segmentIndex = 0
     //var genderTemp = "Woman"
     
     @IBOutlet weak var chestLabel: UILabel!
@@ -43,9 +38,6 @@ class CalculateViewController: UIViewController {
     @IBAction func genderButtonPressed(_ sender: UIButton) {
         if let titleLabel = sender.titleLabel {
             let title = titleLabel.text!
-            
-            if segmentIndex == 1 {
-            //genderTemp = title
             
             if title == "Woman" {
                 chestLabel.text = "Bust"
@@ -79,9 +71,6 @@ class CalculateViewController: UIViewController {
     }
     
     @IBAction func unitSegmentedChanged(_ sender: UISegmentedControl) {
-        print(sender.selectedSegmentIndex)
-        
-        
             
         if sender.selectedSegmentIndex == 0 {
             units = "in"
