@@ -18,9 +18,14 @@ class CalculateViewController: UIViewController {
     @IBOutlet weak var weightSlider: UISlider!*/
     
     var units = "in"
+    
     @IBOutlet weak var chestLabel: UILabel!
     @IBOutlet weak var chestNumLabel: UILabel!
     @IBOutlet weak var chestSlider: UISlider!
+    
+    @IBOutlet weak var waistNumLabel: UILabel!
+    @IBOutlet weak var waistSlider: UISlider!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,25 +39,20 @@ class CalculateViewController: UIViewController {
             
             if title == "Woman" {
                 chestLabel.text = "Bust"
-                
-                //chestNumLabel.text = "36" + units
                 modifyLabels("36" + units, chestNumLabel)
-                
-                /*chestSlider.minimumValue = 29
-                chestSlider.maximumValue = 43
-                chestSlider.value = 36*/
                 modifySliders(29, 43, 36, chestSlider)
+                
+                modifyLabels("31" + units, waistNumLabel)
+                modifySliders(24, 38, 31, waistSlider)
+                
             
             } else if title == "Man" {
                 chestLabel.text = "Chest"
-                
-                //chestNumLabel.text = "41" + units
                 modifyLabels("41" + units, chestNumLabel)
-                
-                /*chestSlider.minimumValue = 32
-                chestSlider.maximumValue = 50
-                chestSlider.value = 41*/
                 modifySliders(32, 50, 41, chestSlider)
+                
+                modifyLabels("35" + units, waistNumLabel)
+                modifySliders(26, 44, 35, waistSlider)
             }
         }
     }
@@ -65,6 +65,7 @@ class CalculateViewController: UIViewController {
             units = "cm"
         }
         modifyLabels((chestNumLabel.text?.prefix(2))! + units, chestNumLabel)
+        modifyLabels((waistNumLabel.text?.prefix(2))! + units, waistNumLabel)
     }
     
     func modifyLabels(_ chestNum: String, _ label: UILabel) {
@@ -72,15 +73,19 @@ class CalculateViewController: UIViewController {
     }
     
     func modifySliders(_ min: Float, _ max: Float, _ val: Float, _ slider: UISlider) {
-        chestSlider.minimumValue = min
-        chestSlider.maximumValue = max
-        chestSlider.value = val
+        slider.minimumValue = min
+        slider.maximumValue = max
+        slider.value = val
     }
     
     @IBAction func chestSliderChanged(_ sender: UISlider) {
-        let height = String(format: "%.0f", sender.value)
-        modifyLabels("\(height)" + units, chestNumLabel)
-        //chestNumLabel.text = "\(height)" + units
+        let chest = String(format: "%.0f", sender.value)
+        modifyLabels("\(chest)" + units, chestNumLabel)
+    }
+    
+    @IBAction func waistSliderChanged(_ sender: UISlider) {
+        let waist = String(format: "%.0f", sender.value)
+        modifyLabels("\(waist)" + units, waistNumLabel)
     }
     
     
