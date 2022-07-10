@@ -157,7 +157,6 @@
                                         <color key="minimumTrackTintColor" red="0.4549019608" green="0.44705882349999998" blue="0.82352941180000006" alpha="0.51797945209999996" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                         <color key="thumbTintColor" red="0.4549019608" green="0.44705882349999998" blue="0.82352941180000006" alpha="0.49510380990000002" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
-                                            <action selector="heightSliderChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="6wY-Su-V5Z"/>
                                             <action selector="hipsSliderChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="xEe-0L-K6U"/>
                                         </connections>
                                     </slider>
@@ -189,7 +188,6 @@
                                         <color key="minimumTrackTintColor" red="0.4549019608" green="0.44705882349999998" blue="0.82352941180000006" alpha="0.51797945209999996" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                         <color key="thumbTintColor" red="0.4549019608" green="0.44705882349999998" blue="0.82352941180000006" alpha="0.49510380990000002" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
-                                            <action selector="heightSliderChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="MaX-nJ-SRM"/>
                                             <action selector="inseamSliderChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="Bzn-dA-erH"/>
                                         </connections>
                                     </slider>

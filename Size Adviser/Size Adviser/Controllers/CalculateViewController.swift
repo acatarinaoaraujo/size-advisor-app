@@ -18,7 +18,8 @@ class CalculateViewController: UIViewController {
     @IBOutlet weak var weightSlider: UISlider!*/
     
     var units = "in"
-    var genderTemp = "Woman"
+    var segmentIndex = 0
+    //var genderTemp = "Woman"
     
     @IBOutlet weak var chestLabel: UILabel!
     @IBOutlet weak var chestNumLabel: UILabel!
@@ -42,7 +43,9 @@ class CalculateViewController: UIViewController {
     @IBAction func genderButtonPressed(_ sender: UIButton) {
         if let titleLabel = sender.titleLabel {
             let title = titleLabel.text!
-            genderTemp = title
+            
+            if segmentIndex == 1 {
+            //genderTemp = title
             
             if title == "Woman" {
                 chestLabel.text = "Bust"
@@ -76,14 +79,17 @@ class CalculateViewController: UIViewController {
     }
     
     @IBAction func unitSegmentedChanged(_ sender: UISegmentedControl) {
-            print(sender.selectedSegmentIndex)
+        print(sender.selectedSegmentIndex)
+        
+        
+            
         if sender.selectedSegmentIndex == 0 {
             units = "in"
             
             modifySliders(chestSlider.minimumValue / 2.54, chestSlider.maximumValue / 2.54 , chestSlider.value / 2.54, chestSlider)
-            modifySliders(waistSlider.minimumValue / 2.54, waistSlider.maximumValue / 2.54 , waistSlider.value / 2.54, chestSlider)
-            modifySliders(hipsSlider.minimumValue / 2.54, hipsSlider.maximumValue / 2.54 , hipsSlider.value / 2.54, chestSlider)
-            modifySliders(inseamSlider.minimumValue / 2.54, inseamSlider.maximumValue / 2.54 , inseamSlider.value / 2.54, chestSlider)
+            modifySliders(waistSlider.minimumValue / 2.54, waistSlider.maximumValue / 2.54 , waistSlider.value / 2.54, waistSlider)
+            modifySliders(hipsSlider.minimumValue / 2.54, hipsSlider.maximumValue / 2.54 , hipsSlider.value / 2.54, hipsSlider)
+            modifySliders(inseamSlider.minimumValue / 2.54, inseamSlider.maximumValue / 2.54 , inseamSlider.value / 2.54, inseamSlider)
         } else {
             units = "cm"
             /*chestNumLabel.text = String(Double((chestNumLabel.text?.prefix(2))!)! * 2.54) + units
@@ -92,9 +98,9 @@ class CalculateViewController: UIViewController {
             inseamNumLabel.text = String(Double((inseamNumLabel.text?.prefix(2))!)! * 2.54) + units*/
             
             modifySliders(chestSlider.minimumValue * 2.54, chestSlider.maximumValue * 2.54 , chestSlider.value * 2.54, chestSlider)
-            modifySliders(waistSlider.minimumValue * 2.54, waistSlider.maximumValue * 2.54 , waistSlider.value * 2.54, chestSlider)
-            modifySliders(hipsSlider.minimumValue * 2.54, hipsSlider.maximumValue * 2.54 , hipsSlider.value * 2.54, chestSlider)
-            modifySliders(inseamSlider.minimumValue * 2.54, inseamSlider.maximumValue * 2.54 , inseamSlider.value * 2.54, chestSlider)
+            modifySliders(waistSlider.minimumValue * 2.54, waistSlider.maximumValue * 2.54 , waistSlider.value * 2.54, waistSlider)
+            modifySliders(hipsSlider.minimumValue * 2.54, hipsSlider.maximumValue * 2.54 , hipsSlider.value * 2.54, hipsSlider)
+            modifySliders(inseamSlider.minimumValue * 2.54, inseamSlider.maximumValue * 2.54 , inseamSlider.value * 2.54, inseamSlider)
         }
         
         modifyLabels((chestNumLabel.text?.prefix(2))! + units, chestNumLabel)
