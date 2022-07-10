@@ -79,18 +79,24 @@ class CalculateViewController: UIViewController {
             print(sender.selectedSegmentIndex)
         if sender.selectedSegmentIndex == 0 {
             units = "in"
+            
             modifySliders(chestSlider.minimumValue / 2.54, chestSlider.maximumValue / 2.54 , chestSlider.value / 2.54, chestSlider)
+            modifySliders(waistSlider.minimumValue / 2.54, waistSlider.maximumValue / 2.54 , waistSlider.value / 2.54, chestSlider)
+            modifySliders(hipsSlider.minimumValue / 2.54, hipsSlider.maximumValue / 2.54 , hipsSlider.value / 2.54, chestSlider)
+            modifySliders(inseamSlider.minimumValue / 2.54, inseamSlider.maximumValue / 2.54 , inseamSlider.value / 2.54, chestSlider)
         } else {
             units = "cm"
             /*chestNumLabel.text = String(Double((chestNumLabel.text?.prefix(2))!)! * 2.54) + units
             waistNumLabel.text = String(Double((waistNumLabel.text?.prefix(2))!)! * 2.54) + units
             hipsNumLabel.text = String(Double((hipsNumLabel.text?.prefix(2))!)! * 2.54) + units
             inseamNumLabel.text = String(Double((inseamNumLabel.text?.prefix(2))!)! * 2.54) + units*/
-            print(chestSlider.minimumValue)
             
             modifySliders(chestSlider.minimumValue * 2.54, chestSlider.maximumValue * 2.54 , chestSlider.value * 2.54, chestSlider)
-            
+            modifySliders(waistSlider.minimumValue * 2.54, waistSlider.maximumValue * 2.54 , waistSlider.value * 2.54, chestSlider)
+            modifySliders(hipsSlider.minimumValue * 2.54, hipsSlider.maximumValue * 2.54 , hipsSlider.value * 2.54, chestSlider)
+            modifySliders(inseamSlider.minimumValue * 2.54, inseamSlider.maximumValue * 2.54 , inseamSlider.value * 2.54, chestSlider)
         }
+        
         modifyLabels((chestNumLabel.text?.prefix(2))! + units, chestNumLabel)
         modifyLabels((waistNumLabel.text?.prefix(2))! + units, waistNumLabel)
         modifyLabels((hipsNumLabel.text?.prefix(2))! + units, hipsNumLabel)
@@ -127,7 +133,6 @@ class CalculateViewController: UIViewController {
         let inseam = String(format: "%.0f", sender.value)
         modifyLabels("\(inseam)" + units, inseamNumLabel)
     }
-    
     
 
     
