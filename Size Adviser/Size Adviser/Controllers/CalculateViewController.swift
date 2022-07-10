@@ -79,8 +79,16 @@ class CalculateViewController: UIViewController {
             print(sender.selectedSegmentIndex)
         if sender.selectedSegmentIndex == 0 {
             units = "in"
+            modifySliders(chestSlider.minimumValue / 2.54, chestSlider.maximumValue / 2.54 , chestSlider.value / 2.54, chestSlider)
         } else {
             units = "cm"
+            /*chestNumLabel.text = String(Double((chestNumLabel.text?.prefix(2))!)! * 2.54) + units
+            waistNumLabel.text = String(Double((waistNumLabel.text?.prefix(2))!)! * 2.54) + units
+            hipsNumLabel.text = String(Double((hipsNumLabel.text?.prefix(2))!)! * 2.54) + units
+            inseamNumLabel.text = String(Double((inseamNumLabel.text?.prefix(2))!)! * 2.54) + units*/
+            print(chestSlider.minimumValue)
+            
+            modifySliders(chestSlider.minimumValue * 2.54, chestSlider.maximumValue * 2.54 , chestSlider.value * 2.54, chestSlider)
             
         }
         modifyLabels((chestNumLabel.text?.prefix(2))! + units, chestNumLabel)
@@ -112,17 +120,16 @@ class CalculateViewController: UIViewController {
     
     @IBAction func hipsSliderChanged(_ sender: UISlider) {
         let hips = String(format: "%.0f", sender.value)
-        modifyLabels("\(hips)" + units, waistNumLabel)
+        modifyLabels("\(hips)" + units, hipsNumLabel)
     }
     
     @IBAction func inseamSliderChanged(_ sender: UISlider) {
         let inseam = String(format: "%.0f", sender.value)
-        modifyLabels("\(inseam)" + units, waistNumLabel)
+        modifyLabels("\(inseam)" + units, inseamNumLabel)
     }
     
     
-    
-    
+
     
     
     /*
