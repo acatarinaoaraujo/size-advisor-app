@@ -18,6 +18,7 @@ class CalculateViewController: UIViewController {
     @IBOutlet weak var weightSlider: UISlider!*/
     
     var units = "in"
+    var genderTemp = "Woman"
     
     @IBOutlet weak var chestLabel: UILabel!
     @IBOutlet weak var chestNumLabel: UILabel!
@@ -41,7 +42,7 @@ class CalculateViewController: UIViewController {
     @IBAction func genderButtonPressed(_ sender: UIButton) {
         if let titleLabel = sender.titleLabel {
             let title = titleLabel.text!
-            print(title)
+            genderTemp = title
             
             if title == "Woman" {
                 chestLabel.text = "Bust"
@@ -80,6 +81,7 @@ class CalculateViewController: UIViewController {
             units = "in"
         } else {
             units = "cm"
+            
         }
         modifyLabels((chestNumLabel.text?.prefix(2))! + units, chestNumLabel)
         modifyLabels((waistNumLabel.text?.prefix(2))! + units, waistNumLabel)
@@ -109,9 +111,13 @@ class CalculateViewController: UIViewController {
     
     
     @IBAction func hipsSliderChanged(_ sender: UISlider) {
+        let hips = String(format: "%.0f", sender.value)
+        modifyLabels("\(hips)" + units, waistNumLabel)
     }
     
     @IBAction func inseamSliderChanged(_ sender: UISlider) {
+        let inseam = String(format: "%.0f", sender.value)
+        modifyLabels("\(inseam)" + units, waistNumLabel)
     }
     
     
