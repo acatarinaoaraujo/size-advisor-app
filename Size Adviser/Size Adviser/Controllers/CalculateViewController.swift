@@ -38,22 +38,24 @@ class CalculateViewController: UIViewController {
                 //chestNumLabel.text = "36" + units
                 modifyLabels("36" + units, chestNumLabel)
                 
-                chestSlider.minimumValue = 29
+                /*chestSlider.minimumValue = 29
                 chestSlider.maximumValue = 43
-                chestSlider.value = 36
+                chestSlider.value = 36*/
+                modifySliders(29, 43, 36, chestSlider)
+            
             } else if title == "Man" {
                 chestLabel.text = "Chest"
                 
                 //chestNumLabel.text = "41" + units
                 modifyLabels("41" + units, chestNumLabel)
                 
-                chestSlider.minimumValue = 32
+                /*chestSlider.minimumValue = 32
                 chestSlider.maximumValue = 50
-                chestSlider.value = 41
+                chestSlider.value = 41*/
+                modifySliders(32, 50, 41, chestSlider)
             }
         }
     }
-    
     
     @IBAction func unitSegmentedChanged(_ sender: UISegmentedControl) {
             print(sender.selectedSegmentIndex)
@@ -65,14 +67,27 @@ class CalculateViewController: UIViewController {
         modifyLabels((chestNumLabel.text?.prefix(2))! + units, chestNumLabel)
     }
     
-    func modifyLabels(_ chestNum: String, _ label : UILabel) {
+    func modifyLabels(_ chestNum: String, _ label: UILabel) {
         label.text = chestNum
+    }
+    
+    func modifySliders(_ min: Float, _ max: Float, _ val: Float, _ slider: UISlider) {
+        chestSlider.minimumValue = min
+        chestSlider.maximumValue = max
+        chestSlider.value = val
     }
     
     @IBAction func chestSliderChanged(_ sender: UISlider) {
         let height = String(format: "%.0f", sender.value)
-        chestNumLabel.text = "\(height)" + units
+        modifyLabels("\(height)" + units, chestNumLabel)
+        //chestNumLabel.text = "\(height)" + units
     }
+    
+    
+    
+    
+    
+    
     /*
     @IBAction func heightSliderChanged(_ sender: UISlider) {
         let height = String(format: "%.2f", sender.value)
