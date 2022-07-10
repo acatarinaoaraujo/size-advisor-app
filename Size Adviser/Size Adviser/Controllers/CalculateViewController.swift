@@ -17,6 +17,7 @@ class CalculateViewController: UIViewController {
     @IBOutlet weak var heightSlider: UISlider!
     @IBOutlet weak var weightSlider: UISlider!*/
     
+    var units = "in"
     @IBOutlet weak var chestLabel: UILabel!
     @IBOutlet weak var chestNumLabel: UILabel!
     @IBOutlet weak var chestSlider: UISlider!
@@ -33,12 +34,16 @@ class CalculateViewController: UIViewController {
             
             if title == "Woman" {
                 chestLabel.text = "Bust"
-                chestNumLabel.text = "36in"
+                chestNumLabel.text = "36" + units
                 chestSlider.minimumValue = 29
                 chestSlider.maximumValue = 43
                 chestSlider.value = 36
             } else if title == "Man" {
                 chestLabel.text = "Chest"
+                chestNumLabel.text = "41" + units
+                chestSlider.minimumValue = 32
+                chestSlider.maximumValue = 50
+                chestSlider.value = 41
             }
         }
     }
@@ -46,13 +51,18 @@ class CalculateViewController: UIViewController {
     
     @IBAction func unitSegmentedChanged(_ sender: UISegmentedControl) {
             print(sender.selectedSegmentIndex)
-        
-        
+        if sender.selectedSegmentIndex == 0 {
+            units = "in"
+            chestNumLabel.text = (chestNumLabel.text?.prefix(2))! + units
+        } else {
+            units = "cm"
+            chestNumLabel.text = (chestNumLabel.text?.prefix(2))! + units
+        }
     }
     
     @IBAction func chestSliderChanged(_ sender: UISlider) {
         let height = String(format: "%.0f", sender.value)
-        chestNumLabel.text = "\(height)in"
+        chestNumLabel.text = "\(height)" + units
     }
     /*
     @IBAction func heightSliderChanged(_ sender: UISlider) {
