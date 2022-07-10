@@ -27,6 +27,12 @@ class CalculateViewController: UIViewController {
     @IBOutlet weak var waistSlider: UISlider!
     
     
+    @IBOutlet weak var hipsNumLabel: UILabel!
+    @IBOutlet weak var hipsSlider: UISlider!
+    
+    @IBOutlet weak var inseamNumLabel: UILabel!
+    @IBOutlet weak var inseamSlider: UISlider!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -45,6 +51,11 @@ class CalculateViewController: UIViewController {
                 modifyLabels("31" + units, waistNumLabel)
                 modifySliders(24, 38, 31, waistSlider)
                 
+                modifyLabels("39" + units, hipsNumLabel)
+                modifySliders(32, 46, 39, hipsSlider)
+                
+                modifyLabels("30" + units, inseamNumLabel)
+                modifySliders(26, 34, 30, inseamSlider)
             
             } else if title == "Man" {
                 chestLabel.text = "Chest"
@@ -53,6 +64,12 @@ class CalculateViewController: UIViewController {
                 
                 modifyLabels("35" + units, waistNumLabel)
                 modifySliders(26, 44, 35, waistSlider)
+                
+                modifyLabels("41" + units, hipsNumLabel)
+                modifySliders(32, 50, 41, hipsSlider)
+                
+                modifyLabels("30" + units, inseamNumLabel)
+                modifySliders(26, 34, 30, inseamSlider)
             }
         }
     }
@@ -66,10 +83,12 @@ class CalculateViewController: UIViewController {
         }
         modifyLabels((chestNumLabel.text?.prefix(2))! + units, chestNumLabel)
         modifyLabels((waistNumLabel.text?.prefix(2))! + units, waistNumLabel)
+        modifyLabels((hipsNumLabel.text?.prefix(2))! + units, hipsNumLabel)
+        modifyLabels((inseamNumLabel.text?.prefix(2))! + units, inseamNumLabel)
     }
     
-    func modifyLabels(_ chestNum: String, _ label: UILabel) {
-        label.text = chestNum
+    func modifyLabels(_ str: String, _ label: UILabel) {
+        label.text = str
     }
     
     func modifySliders(_ min: Float, _ max: Float, _ val: Float, _ slider: UISlider) {
@@ -86,6 +105,13 @@ class CalculateViewController: UIViewController {
     @IBAction func waistSliderChanged(_ sender: UISlider) {
         let waist = String(format: "%.0f", sender.value)
         modifyLabels("\(waist)" + units, waistNumLabel)
+    }
+    
+    
+    @IBAction func hipsSliderChanged(_ sender: UISlider) {
+    }
+    
+    @IBAction func inseamSliderChanged(_ sender: UISlider) {
     }
     
     
