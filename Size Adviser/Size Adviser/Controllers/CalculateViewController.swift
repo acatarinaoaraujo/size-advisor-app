@@ -138,8 +138,8 @@ class CalculateViewController: UIViewController {
         var units: String
         let chest = chestSlider.value
         let waist = waistSlider.value
-        let hips = hipsSlider.value
-        let inseam = inseamSlider.value
+        var hips = hipsSlider.value
+        var inseam = inseamSlider.value
         
         if (segmentIndex == 0) {
             units = "in"

@@ -18,12 +18,13 @@ struct Size {
     let gender: String
     let units: String
     
-    let chest: Double
-    let waist: Double
-    let hips: Double
-    let inseam: Double
+    let chest: Float
+    let waist: Float
+    let hips: Float
+    let inseam: Float
     
-    let evaluation: String
+    let value: Int
+    let advice: String
     let color: UIColor
     
 }

@@ -10,22 +10,30 @@ import UIKit
 
 struct CalculatorBrain {
     
-    var bmi: Size?
+    var size: Size?
     
-    func getBMIValue() -> String {
-        let bmiTo1DecimalPlace = String(format: "%.1f", bmi?.value ?? 0.0)
+    func getSizeValue() -> String {
+        let bmiTo1DecimalPlace = String(format: "%.0", size?.value ?? 0.0)
         return bmiTo1DecimalPlace
     }
     
     func getAdvice() -> String {
-        return bmi?.advice ?? "No advice"
+        return size?.advice ?? "No advice"
     }
     
     func getColor() -> UIColor {
-        return bmi?.color ?? #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+        return size?.color ?? #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
     }
     
-    mutating func calculateBMI(height: Float, weight: Float) {
+    mutating func calculateSize(gender: String, units: String, chest: inout Float, waist: Float, hips: Float, inseam: Float) {
+        if units == "in" {
+            chest = chest * 2.54
+            
+        }
+    }
+    
+    
+    /*mutating func calculateBMI(height: Float, weight: Float) {
         let bmiValue = weight / (height * height)
 
         if bmiValue < 18.5 {
@@ -35,5 +43,7 @@ struct CalculatorBrain {
         } else {
             bmi = BMI(value: bmiValue, advice: "Eat less pies!", color: #colorLiteral(red: 0.9098039269, green: 0.4784313738, blue: 0.6431372762, alpha: 1))
         }
-    }
+    }*/
+    
+    
 }
