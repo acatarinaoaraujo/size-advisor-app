@@ -225,7 +225,7 @@
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="clipsToBounds" value="YES"/>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <action selector="calculatePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ufl-Vz-Ib0"/>
+                                            <action selector="calculatePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8qo-SD-SJ7"/>
                                         </connections>
                                     </button>
                                 </subviews>

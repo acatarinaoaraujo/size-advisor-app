@@ -13,8 +13,8 @@ class CalculateViewController: UIViewController {
     var calculatorBrain = CalculatorBrain()
     
     var units = "in"
-    //var segmentIndex = 0
-    //var genderTemp = "Woman"
+    var segmentIndex = 0
+    var genderTemp = "Woman"
     
     @IBOutlet weak var chestLabel: UILabel!
     @IBOutlet weak var chestNumLabel: UILabel!
@@ -67,6 +67,7 @@ class CalculateViewController: UIViewController {
                 modifyLabels("30" + units, inseamNumLabel)
                 modifySliders(26, 34, 30, inseamSlider)
             }
+            genderTemp = title
         }
     }
     
@@ -96,6 +97,8 @@ class CalculateViewController: UIViewController {
         modifyLabels((waistNumLabel.text?.prefix(2))! + units, waistNumLabel)
         modifyLabels((hipsNumLabel.text?.prefix(2))! + units, hipsNumLabel)
         modifyLabels((inseamNumLabel.text?.prefix(2))! + units, inseamNumLabel)
+        
+        segmentIndex = sender.selectedSegmentIndex
     }
     
     func modifyLabels(_ str: String, _ label: UILabel) {
@@ -129,19 +132,35 @@ class CalculateViewController: UIViewController {
         modifyLabels("\(inseam)" + units, inseamNumLabel)
     }
     
-
     
+    @IBAction func calculatePressed(_ sender: UIButton) {
+        let gender = genderTemp
+        var units: String
+        let chest = chestSlider.value
+        let waist = waistSlider.value
+        var hips = hipsSlider.value
+        var inseam = inseamSlider.value
+        
+        if (segmentIndex == 0) {
+            units = "in"
+        } else {
+            units = "cm"
+        }
+        
+        calculatorBrain.calculateSize(gender: gender, units: units, chest: chest, waist: waist, hips: hips, inseam: inseam)
+        performSegue(withIdentifier: "goToResult", sender: self)
+    }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "goToResult" {
+            let destinationVC = segue.destination as! ResultViewController
+            destinationVC.bmiValue = calculatorBrain.getBMIValue()
+            destinationVC.advice = calculatorBrain.getAdvice()
+            destinationVC.color = calculatorBrain.getColor()
+        }
+    }
     /*
-    @IBAction func heightSliderChanged(_ sender: UISlider) {
-        let height = String(format: "%.2f", sender.value)
-        heightLabel.text = "\(height)m"
-    }
-    
-    @IBAction func weightSliderChanged(_ sender: UISlider) {
-        let weight = String(format: "%.0f", sender.value)
-        weightLabel.text = "\(weight)Kg"
-    }
+
     
     @IBAction func calculatePressed(_ sender: UIButton) {
         let height = heightSlider.value
