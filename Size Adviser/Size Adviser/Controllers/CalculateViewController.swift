@@ -136,8 +136,8 @@ class CalculateViewController: UIViewController {
     @IBAction func calculatePressed(_ sender: UIButton) {
         let gender = genderTemp
         var units: String
-        let chest = chestSlider.value
-        let waist = waistSlider.value
+        var chest = chestSlider.value
+        var waist = waistSlider.value
         var hips = hipsSlider.value
         var inseam = inseamSlider.value
         
@@ -147,7 +147,7 @@ class CalculateViewController: UIViewController {
             units = "cm"
         }
         
-        calculatorBrain.calculateSize(gender: gender, units: units, chest: chest, waist: waist, hips: hips, inseam: inseam)
+        calculatorBrain.calculateSize(gender: gender, units: units, chest: &chest, waist: &waist, hips: &hips, inseam: &inseam)
         performSegue(withIdentifier: "goToResult", sender: self)
     }
     

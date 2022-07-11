@@ -25,12 +25,90 @@ struct CalculatorBrain {
         return size?.color ?? #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
     }
     
-    mutating func calculateSize(gender: String, units: String, chest: inout Float, waist: Float, hips: Float, inseam: Float) {
-        if units == "in" {
-            chest = chest * 2.54
+    mutating func calculateSize(gender: String, units: String, chest: inout Float, waist: inout Float, hips: inout Float, inseam: inout Float) {
+        if units == "cm" {
+            chest = chest / 2.54
+            waist = waist / 2.54
+            hips = hips / 2.54
+            inseam = inseam / 2.54
+        }
+        
+        if gender == "Woman" {
+            sizeForWoman(chest, waist, hips, inseam)
             
+        } else {
+            sizeForMan(chest, waist, hips, inseam)
         }
     }
+    
+    mutating func sizeForWoman(_ chest: Float, _ waist: Float, _ hips: Float, _ inseam: Float){
+        womanChest(chest)
+        
+    }
+    
+    mutating func womanChest(_ chest: Float) -> Float? {
+        
+        switch (chest) {
+        case ..<31.0:
+                return 0.0
+        case ..<33.0:
+                return 0.0
+        case ..<35.0:
+                return 0.0
+        case ..<37.0:
+                return 0.0
+        case ..<39.0:
+                return 0.0
+        case ..<41.0:
+                return 0.0
+        case ..<43.0:
+                return 0.0
+        default: return 0.0
+
+        }
+    }
+
+        
+       /* if chest < 31 {
+            // xxs
+        } else if chest < 33 {
+            // xs
+        } else if chest < 35 {
+            // s
+        } else if chest < 37 {
+            // m
+        } else if chest < 39 {
+            // l
+        } else if chest
+        
+    }*/
+    
+    mutating func sizeForMan(_ chest: Float, _ waist: Float, _ hips: Float, _ inseam: Float){
+        
+    }
+    
+    /* if let n = number {
+     switch symbol {
+     case "+/-":
+         return n * -1
+     case "AC":
+         return 0
+     case "%":
+         return n * 0.01
+     case "sin":
+         return sin(n)
+     case "cos":
+         return cos(n)
+     case "tan":
+         return tan(n)
+     case "√":
+         return n.squareRoot()
+     case "=":
+         return performTwoNumCalculation(n2: n)
+     default:
+         intermediateCalculation = (n1: n, calcMethod: symbol)
+     }
+ } */
     
     
     /*mutating func calculateBMI(height: Float, weight: Float) {
