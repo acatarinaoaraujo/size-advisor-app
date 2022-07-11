@@ -10,7 +10,7 @@
 		F36C4B36287695EA00A5CCF4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36C4B35287695EA00A5CCF4 /* AppDelegate.swift */; };
 		F36C4B602876991800A5CCF4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F36C4B4D2876991800A5CCF4 /* Assets.xcassets */; };
 		F36C4B612876991800A5CCF4 /* CalculatorBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36C4B4F2876991800A5CCF4 /* CalculatorBrain.swift */; };
-		F36C4B622876991800A5CCF4 /* BMI.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36C4B502876991800A5CCF4 /* BMI.swift */; };
+		F36C4B622876991800A5CCF4 /* Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36C4B502876991800A5CCF4 /* Size.swift */; };
 		F36C4B642876991800A5CCF4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F36C4B522876991800A5CCF4 /* LaunchScreen.storyboard */; };
 		F36C4B662876991800A5CCF4 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36C4B562876991800A5CCF4 /* ResultViewController.swift */; };
 		F36C4B672876991800A5CCF4 /* CalculateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36C4B572876991800A5CCF4 /* CalculateViewController.swift */; };
@@ -23,7 +23,7 @@
 		F36C4B35287695EA00A5CCF4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F36C4B4D2876991800A5CCF4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F36C4B4F2876991800A5CCF4 /* CalculatorBrain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalculatorBrain.swift; sourceTree = "<group>"; };
-		F36C4B502876991800A5CCF4 /* BMI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BMI.swift; sourceTree = "<group>"; };
+		F36C4B502876991800A5CCF4 /* Size.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Size.swift; sourceTree = "<group>"; };
 		F36C4B532876991800A5CCF4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F36C4B562876991800A5CCF4 /* ResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		F36C4B572876991800A5CCF4 /* CalculateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalculateViewController.swift; sourceTree = "<group>"; };
@@ -78,7 +78,7 @@
 			isa = PBXGroup;
 			children = (
 				F36C4B4F2876991800A5CCF4 /* CalculatorBrain.swift */,
-				F36C4B502876991800A5CCF4 /* BMI.swift */,
+				F36C4B502876991800A5CCF4 /* Size.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -174,7 +174,7 @@
 				F36C4B612876991800A5CCF4 /* CalculatorBrain.swift in Sources */,
 				F36C4B36287695EA00A5CCF4 /* AppDelegate.swift in Sources */,
 				F36C4B672876991800A5CCF4 /* CalculateViewController.swift in Sources */,
-				F36C4B622876991800A5CCF4 /* BMI.swift in Sources */,
+				F36C4B622876991800A5CCF4 /* Size.swift in Sources */,
 				F36C4B662876991800A5CCF4 /* ResultViewController.swift in Sources */,
 				F36C4B6A2876991800A5CCF4 /* SceneDelegate.swift in Sources */,
 			);
