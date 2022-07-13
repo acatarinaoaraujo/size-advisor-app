@@ -158,7 +158,7 @@ class CalculateViewController: UIViewController {
         var chest = chestSlider.value
         var waist = waistSlider.value
         var hips = hipsSlider.value
-        var inseam = inseamSlider.value
+        //var inseam = inseamSlider.value
         
         if (segmentIndex == 0) {
             units = "in"
@@ -166,18 +166,18 @@ class CalculateViewController: UIViewController {
             units = "cm"
         }
         
-        calculatorBrain.calculateSize(gender: gender, units: units, chest: &chest, waist: &waist, hips: &hips, inseam: &inseam)
-        //performSegue(withIdentifier: "goToResult", sender: self)
+        calculatorBrain.calculateSize(gender: gender, units: units, chest: &chest, waist: &waist, hips: &hips)
+        performSegue(withIdentifier: "goToResult", sender: self)
     }
     
-    /*override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "goToResult" {
             let destinationVC = segue.destination as! ResultViewController
-            destinationVC.bmiValue = calculatorBrain.getBMIValue()
-            destinationVC.advice = calculatorBrain.getAdvice()
-            destinationVC.color = calculatorBrain.getColor()
+            destinationVC.bmiValue = calculatorBrain.getChest()
+            destinationVC.advice = calculatorBrain.getWaist()
+            destinationVC.color = calculatorBrain.getHips()
         }
-    }*/
+    }
     /*
 
     

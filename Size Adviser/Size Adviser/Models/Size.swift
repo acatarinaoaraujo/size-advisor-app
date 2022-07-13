@@ -20,7 +20,6 @@ struct Size {
     let chest: String
     let waist: String
     let hips: String
-    let inseam: String
     
 }
 

@@ -12,6 +12,27 @@ struct CalculatorBrain {
     
     var size: Size?
     
+    func getChest() -> String {
+        return size?.chest ?? "-"
+        
+    }
+    
+    func getWaist() -> String {
+        return size?.waist ?? "-"
+        
+    }
+    
+    func getHips() -> String {
+        return size?.hips ?? "-"
+        
+    }
+    
+    func getGender() -> String {
+        return size?.gender ?? "No Gender"
+        
+    }
+    
+    
     /*func getSizeValue() -> String {
         let bmiTo1DecimalPlace = String(format: "%.0", size?.value ?? 0.0)
         return bmiTo1DecimalPlace
@@ -25,34 +46,30 @@ struct CalculatorBrain {
         return size?.color ?? #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
     }*/
     
-    mutating func calculateSize(gender: String, units: String, chest: inout Float, waist: inout Float, hips: inout Float, inseam: inout Float) {
+    mutating func calculateSize(gender: String, units: String, chest: inout Float, waist: inout Float, hips: inout Float) {
         print(chest)
         print(waist)
         print(hips)
-        print(inseam)
         
         if units == "cm" {
-            print("Changed to Inches")
             chest = chest / 2.54
             waist = waist / 2.54
             hips = hips / 2.54
-            inseam = inseam / 2.54
         }
         
         print(chest)
         print(waist)
         print(hips)
-        print(inseam)
         
         if gender == "Woman" {
-            sizeForWoman(gender, chest, waist, hips, inseam)
+            sizeForWoman(gender, chest, waist, hips)
             
         } else {
             //sizeForMan(chest, waist, hips, inseam)
         }
     }
     
-    mutating func sizeForWoman(_ gender: String, _ chest: Float, _ waist: Float, _ hips: Float, _ inseam: Float){
+    mutating func sizeForWoman(_ gender: String, _ chest: Float, _ waist: Float, _ hips: Float){
         let estimationChest = sizeChart(chest, 31.0, 32.5, 34.0, 35.5, 37, 38.5, 40)
         let estimationWaist = sizeChart(waist, 25.5, 27.0, 28.5, 30.0, 31.5, 33.0, 34.5)
         let estimationHips = sizeChart(hips, 32.0, 33.5, 35.0, 36.5, 39.5, 41.0, 42.5)
@@ -61,17 +78,9 @@ struct CalculatorBrain {
         print(estimationWaist)
         print(estimationHips)
         
-        /* let gender: String
-         
-         let chest: Float
-         let waist: Float
-         let hips: Float
-         let inseam: Float
-         
-         let value: String
-*/
+
         
-        size = Size(gender: gender, chest: estimationChest, waist: estimationWaist, hips: estimationHips, inseam: "-")
+        size = Size(gender: gender, chest: estimationChest, waist: estimationWaist, hips: estimationHips)
         
     }
     
