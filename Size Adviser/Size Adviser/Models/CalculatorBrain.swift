@@ -26,27 +26,40 @@ struct CalculatorBrain {
     }
     
     mutating func calculateSize(gender: String, units: String, chest: inout Float, waist: inout Float, hips: inout Float, inseam: inout Float) {
+        print(chest)
+        print(waist)
+        print(hips)
+        print(inseam)
+        
         if units == "cm" {
+            print("Changed to Inches")
             chest = chest / 2.54
             waist = waist / 2.54
             hips = hips / 2.54
             inseam = inseam / 2.54
         }
         
+        print(chest)
+        print(waist)
+        print(hips)
+        print(inseam)
+        
         if gender == "Woman" {
-            sizeForWoman(chest, waist, hips, inseam)
+            //sizeForWoman(chest, waist, hips, inseam)
             
         } else {
-            sizeForMan(chest, waist, hips, inseam)
+            //sizeForMan(chest, waist, hips, inseam)
         }
     }
     
     mutating func sizeForWoman(_ chest: Float, _ waist: Float, _ hips: Float, _ inseam: Float){
-        womanChest(chest)
+        /*womanChest(chest)
+        womanWaist(waist)
+        womanHips(hips)*/
         
     }
     
-    mutating func womanChest(_ chest: Float) -> String? {
+    /*mutating func womanChest(_ chest: Float) -> String? {
         
         switch (chest) {
         case ..<32.0:
@@ -110,7 +123,7 @@ struct CalculatorBrain {
         default: return "XXXL"
 
         }
-    }
+    }*/
 
         
        /* if chest < 31 {
@@ -127,9 +140,9 @@ struct CalculatorBrain {
         
     }*/
     
-    mutating func sizeForMan(_ chest: Float, _ waist: Float, _ hips: Float, _ inseam: Float){
+    /*mutating func sizeForMan(_ chest: Float, _ waist: Float, _ hips: Float, _ inseam: Float){
         
-    }
+    }*/
     
     /* if let n = number {
      switch symbol {

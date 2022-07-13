@@ -148,17 +148,17 @@ class CalculateViewController: UIViewController {
         }
         
         calculatorBrain.calculateSize(gender: gender, units: units, chest: &chest, waist: &waist, hips: &hips, inseam: &inseam)
-        performSegue(withIdentifier: "goToResult", sender: self)
+        //performSegue(withIdentifier: "goToResult", sender: self)
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    /*override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "goToResult" {
             let destinationVC = segue.destination as! ResultViewController
             destinationVC.bmiValue = calculatorBrain.getBMIValue()
             destinationVC.advice = calculatorBrain.getAdvice()
             destinationVC.color = calculatorBrain.getColor()
         }
-    }
+    }*/
     /*
 
     
