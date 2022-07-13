@@ -93,9 +93,23 @@ class CalculateViewController: UIViewController {
             modifySliders(inseamSlider.minimumValue * 2.54, inseamSlider.maximumValue * 2.54 , inseamSlider.value * 2.54, inseamSlider)
         }
         
-        modifyLabels((chestNumLabel.text?.prefix(2))! + units, chestNumLabel)
+        print(chestNumLabel.text!.count)
+        if chestNumLabel.text!.count  == 5 {
+            modifyLabels((chestNumLabel.text?.prefix(3))! + units, chestNumLabel)
+        } else {
+            modifyLabels((chestNumLabel.text?.prefix(2))! + units, chestNumLabel)
+            
+        }
+        
+        print(hipsNumLabel.text!.count)
+        if hipsNumLabel.text!.count  == 5 {
+            modifyLabels((hipsNumLabel.text?.prefix(3))! + units, hipsNumLabel)
+        } else {
+            modifyLabels((hipsNumLabel.text?.prefix(2))! + units, hipsNumLabel)
+            
+        }
+        
         modifyLabels((waistNumLabel.text?.prefix(2))! + units, waistNumLabel)
-        modifyLabels((hipsNumLabel.text?.prefix(2))! + units, hipsNumLabel)
         modifyLabels((inseamNumLabel.text?.prefix(2))! + units, inseamNumLabel)
         
         segmentIndex = sender.selectedSegmentIndex
