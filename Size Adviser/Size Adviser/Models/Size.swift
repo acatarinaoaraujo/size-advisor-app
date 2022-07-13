@@ -16,16 +16,11 @@ import UIKit
 
 struct Size {
     let gender: String
-    let units: String
     
-    let chest: Float
-    let waist: Float
-    let hips: Float
-    let inseam: Float
-    
-    let value: Int
-    let advice: String
-    let color: UIColor
+    let chest: String
+    let waist: String
+    let hips: String
+    let inseam: String
     
 }
 

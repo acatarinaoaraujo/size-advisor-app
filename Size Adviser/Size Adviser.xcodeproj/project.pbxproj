@@ -68,8 +68,8 @@
 				F36C4B522876991800A5CCF4 /* LaunchScreen.storyboard */,
 				F36C4B552876991800A5CCF4 /* Controllers */,
 				F36C4B582876991800A5CCF4 /* Views */,
-				F36C4B4D2876991800A5CCF4 /* Assets.xcassets */,
 				F36C4B5B2876991800A5CCF4 /* Info.plist */,
+				F36C4B4D2876991800A5CCF4 /* Assets.xcassets */,
 			);
 			path = "Size Adviser";
 			sourceTree = "<group>";
