@@ -46,24 +46,68 @@ struct CalculatorBrain {
         
     }
     
-    mutating func womanChest(_ chest: Float) -> Float? {
+    mutating func womanChest(_ chest: Float) -> String? {
         
         switch (chest) {
-        case ..<31.0:
-                return 0.0
-        case ..<33.0:
-                return 0.0
+        case ..<32.0:
+                return "XXS"
+        case ..<33.5:
+                return "XS"
         case ..<35.0:
-                return 0.0
+                return "S"
+        case ..<36.5:
+                return "M"
+        case ..<38:
+                return "L"
+        case ..<39.5:
+                return "XL"
+        case ..<41:
+                return "XXL"
+        default: return "XXXL"
+
+        }
+    }
+    
+    mutating func womanWaist(_ waist: Float) -> String? {
+        
+        switch (waist) {
+        case ..<26.5:
+                return "XXS"
+        case ..<28.0:
+                return "XS"
+        case ..<29.5:
+                return "S"
+        case ..<31.0:
+                return "M"
+        case ..<32.5:
+                return "L"
+        case ..<34.0:
+                return "XL"
+        case ..<35.5:
+                return "XXL"
+        default: return "XXXL"
+
+        }
+    }
+    
+    mutating func womanHips(_ hips: Float) -> String? {
+        
+        switch (hips) {
+        case ..<35.5:
+                return "XXS"
         case ..<37.0:
-                return 0.0
-        case ..<39.0:
-                return 0.0
-        case ..<41.0:
-                return 0.0
+                return "XS"
+        case ..<38.5:
+                return "S"
+        case ..<40.0:
+                return "M"
+        case ..<41.5:
+                return "L"
         case ..<43.0:
-                return 0.0
-        default: return 0.0
+                return "XL"
+        case ..<44.5:
+                return "XXL"
+        default: return "XXXL"
 
         }
     }
