@@ -82,77 +82,38 @@ class CalculateViewController: UIViewController {
             modifySliders(inseamSlider.minimumValue / 2.54, inseamSlider.maximumValue / 2.54 , inseamSlider.value / 2.54, inseamSlider)
             
             
-            var intTemp = Double((waistNumLabel.text?.prefix(2))!)! / 2.54
-            modifyLabels(String(format: "%.0f", intTemp) + units, waistNumLabel)
-            
-            intTemp = Double((inseamNumLabel.text?.prefix(2))!)! / 2.54
-            modifyLabels(String(format: "%.0f", intTemp) + units, inseamNumLabel)
-            
             if chestNumLabel.text!.count  == 5 {
-                intTemp = Double((chestNumLabel.text?.prefix(3))!)! / 2.54
-                modifyLabels(String(format: "%.0f", intTemp) + units, chestNumLabel)
+                modifyLabels(String(format: "%.0f", Double((chestNumLabel.text?.prefix(3))!)! / 2.54) + units, chestNumLabel)
             } else {
-                intTemp = Double((chestNumLabel.text?.prefix(2))!)! / 2.54
-                modifyLabels(String(format: "%.0f", intTemp) + units, chestNumLabel)
+                modifyLabels(String(format: "%.0f", Double((chestNumLabel.text?.prefix(2))!)! / 2.54) + units, chestNumLabel)
             }
-            
             
             if hipsNumLabel.text!.count  == 5 {
-                intTemp = Double((hipsNumLabel.text?.prefix(3))!)! / 2.54
-                modifyLabels(String(format: "%.0f", intTemp) + units, hipsNumLabel)
+                modifyLabels(String(format: "%.0f", Double((hipsNumLabel.text?.prefix(3))!)! / 2.54) + units, hipsNumLabel)
             } else {
-                intTemp = Double((hipsNumLabel.text?.prefix(2))!)! / 2.54
-                modifyLabels(String(format: "%.0f", intTemp) + units, hipsNumLabel)
+                modifyLabels(String(format: "%.0f", Double((hipsNumLabel.text?.prefix(2))!)! / 2.54) + units, hipsNumLabel)
                 
             }
+            
+            modifyLabels(String(format: "%.0f", Double((waistNumLabel.text?.prefix(2))!)! / 2.54) + units, waistNumLabel)
+            modifyLabels(String(format: "%.0f", Double((inseamNumLabel.text?.prefix(2))!)! / 2.54) + units, inseamNumLabel)
             
             
             
         } else {
             units = "cm"
-            /*chestNumLabel.text = String(Double((chestNumLabel.text?.prefix(2))!)! * 2.54) + units
-            waistNumLabel.text = String(Double((waistNumLabel.text?.prefix(2))!)! * 2.54) + units
-            hipsNumLabel.text = String(Double((hipsNumLabel.text?.prefix(2))!)! * 2.54) + units
-            inseamNumLabel.text = String(Double((inseamNumLabel.text?.prefix(2))!)! * 2.54) + units*/
             
             modifySliders(chestSlider.minimumValue * 2.54, chestSlider.maximumValue * 2.54 , chestSlider.value * 2.54, chestSlider)
             modifySliders(waistSlider.minimumValue * 2.54, waistSlider.maximumValue * 2.54 , waistSlider.value * 2.54, waistSlider)
             modifySliders(hipsSlider.minimumValue * 2.54, hipsSlider.maximumValue * 2.54 , hipsSlider.value * 2.54, hipsSlider)
             modifySliders(inseamSlider.minimumValue * 2.54, inseamSlider.maximumValue * 2.54 , inseamSlider.value * 2.54, inseamSlider)
             
-            var intTempCalculation = Double((chestNumLabel.text?.prefix(2))!)! * 2.54
-            modifyLabels(String(format: "%.0f", intTempCalculation) + units, chestNumLabel)
-            
-            intTempCalculation = Double((waistNumLabel.text?.prefix(2))!)! * 2.54
-            modifyLabels(String(format: "%.0f", intTempCalculation) + units, waistNumLabel)
-            
-            intTempCalculation = Double((hipsNumLabel.text?.prefix(2))!)! * 2.54
-            modifyLabels(String(format: "%.0f", intTempCalculation) + units, hipsNumLabel)
-            
-            intTempCalculation = Double((inseamNumLabel.text?.prefix(2))!)! * 2.54
-            modifyLabels(String(format: "%.0f", intTempCalculation) + units, inseamNumLabel)
-
+            modifyLabels(String(format: "%.0f", Double((chestNumLabel.text?.prefix(2))!)! * 2.54) + units, chestNumLabel)
+            modifyLabels(String(format: "%.0f", Double((waistNumLabel.text?.prefix(2))!)! * 2.54) + units, waistNumLabel)
+            modifyLabels(String(format: "%.0f", Double((hipsNumLabel.text?.prefix(2))!)! * 2.54) + units, hipsNumLabel)
+            modifyLabels(String(format: "%.0f", Double((inseamNumLabel.text?.prefix(2))!)! * 2.54) + units, inseamNumLabel)
             
         }
-        
-       /* print(chestNumLabel.text!.count)
-        if chestNumLabel.text!.count  == 5 {
-            modifyLabels((chestNumLabel.text?.prefix(3))! + units, chestNumLabel)
-        } else {
-            modifyLabels((chestNumLabel.text?.prefix(2))! + units, chestNumLabel)
-            
-        }
-        
-        print(hipsNumLabel.text!.count)
-        if hipsNumLabel.text!.count  == 5 {
-            modifyLabels((hipsNumLabel.text?.prefix(3))! + units, hipsNumLabel)
-        } else {
-            modifyLabels((hipsNumLabel.text?.prefix(2))! + units, hipsNumLabel)
-            
-        }
-        
-        modifyLabels((waistNumLabel.text?.prefix(2))! + units, waistNumLabel)
-        modifyLabels((inseamNumLabel.text?.prefix(2))! + units, inseamNumLabel)*/
         
         segmentIndex = sender.selectedSegmentIndex
     }
