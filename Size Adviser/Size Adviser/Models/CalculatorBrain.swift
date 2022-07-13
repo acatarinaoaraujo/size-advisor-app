@@ -53,9 +53,9 @@ struct CalculatorBrain {
     }
     
     mutating func sizeForWoman(_ chest: Float, _ waist: Float, _ hips: Float, _ inseam: Float){
-        let estimationChest = womanChest(chest)
-        let estimationWaist = womanWaist(waist)
-        let estimationHips = womanHips(hips)
+        let estimationChest = sizeChart(chest, 31.0, 32.5, 34.0, 35.5, 37, 38.5, 40)
+        let estimationWaist = sizeChart(waist, 25.5, 27.0, 28.5, 30.0, 31.5, 33.0, 34.5)
+        let estimationHips = sizeChart(hips, 32.0, 33.5, 35.0, 36.5, 39.5, 41.0, 42.5)
         
         print(estimationChest)
         print(estimationWaist)
@@ -63,7 +63,30 @@ struct CalculatorBrain {
         
     }
     
-    mutating func womanChest(_ chest: Float) -> String {
+    mutating func sizeChart(_ val: Float, _ xxs: Float, _ xs: Float, _ s: Float, _ m: Float, _ l: Float, _ xl: Float, _ xxl: Float) -> String {
+        
+        switch (val) {
+        case ..<xxs:
+                return "XXS"
+        case ..<xs:
+                return "XS"
+        case ..<s:
+                return "S"
+        case ..<m:
+                return "M"
+        case ..<l:
+                return "L"
+        case ..<xl:
+                return "XL"
+        case ..<xxl:
+                return "XXL"
+        default: return "XXXL"
+
+        }
+    }
+    
+    
+    /*mutating func womanChest(_ chest: Float) -> String {
         
         switch (chest) {
         case ..<31.0:
@@ -127,7 +150,7 @@ struct CalculatorBrain {
         default: return "XXXL"
 
         }
-    }
+    }*/
 
         
        /* if chest < 31 {
