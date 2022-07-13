@@ -10,9 +10,10 @@ import UIKit
 
 class ResultViewController: UIViewController {
     
-    var bmiValue: String?
-    var advice: String?
-    var color: UIColor?
+    var gender: String?
+    var chest: String?
+    var waist: String?
+    var hips: UIColor?
 
     @IBOutlet weak var bmiLabel: UILabel!
     @IBOutlet weak var adviceLabel: UILabel!

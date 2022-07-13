@@ -77,8 +77,7 @@ struct CalculatorBrain {
         print(estimationChest)
         print(estimationWaist)
         print(estimationHips)
-        
-
+    
         
         size = Size(gender: gender, chest: estimationChest, waist: estimationWaist, hips: estimationHips)
         
