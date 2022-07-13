@@ -39,6 +39,7 @@ class CalculateViewController: UIViewController {
         if let titleLabel = sender.titleLabel {
             let title = titleLabel.text!
             
+            
             if title == "Woman" {
                 chestLabel.text = "Bust"
                 modifyLabels("36" + units, chestNumLabel)
@@ -173,11 +174,13 @@ class CalculateViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "goToResult" {
             let destinationVC = segue.destination as! ResultViewController
-            destinationVC.bmiValue = calculatorBrain.getChest()
-            destinationVC.advice = calculatorBrain.getWaist()
-            destinationVC.color = calculatorBrain.getHips()
+            destinationVC.chest = calculatorBrain.getChest()
+            destinationVC.waist = calculatorBrain.getWaist()
+            destinationVC.hips = calculatorBrain.getHips()
+
         }
     }
+    
     /*
 
     

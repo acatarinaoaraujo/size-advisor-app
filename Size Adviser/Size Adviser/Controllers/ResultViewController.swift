@@ -10,20 +10,22 @@ import UIKit
 
 class ResultViewController: UIViewController {
     
-    var gender: String?
     var chest: String?
     var waist: String?
-    var hips: UIColor?
+    var hips: String?
 
-    @IBOutlet weak var bmiLabel: UILabel!
-    @IBOutlet weak var adviceLabel: UILabel!
+    
+    @IBOutlet weak var chestLabel: UILabel!
+    @IBOutlet weak var waistLabel: UILabel!
+    @IBOutlet weak var hipsLabel: UILabel!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        bmiLabel.text = bmiValue
-        adviceLabel.text = advice
-        view.backgroundColor = color
+        chestLabel.text = chest
+        waistLabel.text = waist
+        hipsLabel.text = hips
     }
     
     @IBAction func recalculatePressed(_ sender: UIButton) {

@@ -8,19 +8,10 @@
 
 import UIKit
 
-/*struct Size {
-    let value: Float
-    let advice: String
-    let color: UIColor
-}*/
-
 struct Size {
-    let gender: String
-    
     let chest: String
     let waist: String
     let hips: String
     
 }
 
-// gender: gender, units: units, chest: chest, waist: waist, hips: hips, inseam:
