@@ -55,7 +55,7 @@ struct CalculatorBrain {
         print(waist)
         print(hips)
         
-        if gender == "Woman" {
+        if gender == "WOMAN" {
             sizeForWoman(chest, waist, hips)
             
         } else {

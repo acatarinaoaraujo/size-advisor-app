@@ -40,7 +40,7 @@ class CalculateViewController: UIViewController {
             let title = titleLabel.text!
             
             
-            if title == "Woman" {
+            if title == "WOMAN" {
                 chestLabel.text = "Bust"
                 modifyLabels("36" + units, chestNumLabel)
                 modifySliders(29, 43, 36, chestSlider)
@@ -54,7 +54,7 @@ class CalculateViewController: UIViewController {
                 modifyLabels("30" + units, inseamNumLabel)
                 modifySliders(26, 34, 30, inseamSlider)
             
-            } else if title == "Man" {
+            } else if title == "MAN" {
                 chestLabel.text = "Chest"
                 modifyLabels("41" + units, chestNumLabel)
                 modifySliders(32, 50, 41, chestSlider)
@@ -73,6 +73,8 @@ class CalculateViewController: UIViewController {
     }
     
     @IBAction func unitSegmentedChanged(_ sender: UISegmentedControl) {
+        
+        sender.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.white], for: UIControl.State.selected)
             
         if sender.selectedSegmentIndex == 0 {
             units = "in"
@@ -159,7 +161,6 @@ class CalculateViewController: UIViewController {
         var chest = chestSlider.value
         var waist = waistSlider.value
         var hips = hipsSlider.value
-        //var inseam = inseamSlider.value
         
         if (segmentIndex == 0) {
             units = "in"
