@@ -1,9 +1,9 @@
 //
 //  ViewController.swift
-//  BMI Calculator
+//  Size Calculator
 //
-//  Created by Angela Yu on 21/08/2019.
-//  Copyright © 2019 Angela Yu. All rights reserved.
+//  Created by Ana Araujo on 143/07/2022.
+//  Copyright © 2022 Ana Araujo. All rights reserved.
 //
 
 import UIKit
@@ -182,31 +182,6 @@ class CalculateViewController: UIViewController {
         }
     }
     
-    /*
-
-    
-    @IBAction func calculatePressed(_ sender: UIButton) {
-        let height = heightSlider.value
-        let weight = weightSlider.value
-
-        calculatorBrain.calculateBMI(height: height, weight: weight)
-        performSegue(withIdentifier: "goToResult", sender: self)
-    
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "goToResult" {
-            let destinationVC = segue.destination as! ResultViewController
-            destinationVC.bmiValue = calculatorBrain.getBMIValue()
-            destinationVC.advice = calculatorBrain.getAdvice()
-            destinationVC.color = calculatorBrain.getColor()
-        }
-    } */
-}
-
-
-
-
 
 
 
