@@ -1,9 +1,9 @@
 //
 //  CalculatorBrain.swift
-//  BMI Calculator
+//  Size Calculator
 //
-//  Created by Angela Yu on 28/08/2019.
-//  Copyright © 2019 Angela Yu. All rights reserved.
+//  Created by Ana Araujo on 143/07/2022.
+//  Copyright © 2022 Ana Araujo. All rights reserved.
 //
 
 import UIKit
